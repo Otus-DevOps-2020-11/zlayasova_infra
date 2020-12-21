@@ -22,5 +22,5 @@ user appuser
 port 22
 ProxyCommand ssh bastion -W %h:%p
 
-Для настройки ssl сертификата использовал следующее доменно имя 84.201.131.229.sslip.io
+Для настройки ssl сертификата использовал следующее доменное имя 84.201.131.229.sslip.io
 Данное имя внес в Pritunl в Settings-Lets Encrypt Domain
