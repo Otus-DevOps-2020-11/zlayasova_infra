@@ -1,0 +1,7 @@
+{
+  "service_account_key_file": "abc",
+  "folder_id": "bcdf123",
+  "source_image_family": "ubuntu-1604-lts",
+  "image_family": "reddit-base",
+  "disk_size_gb": "21"
+}

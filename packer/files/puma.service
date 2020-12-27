@@ -1,0 +1,13 @@
+[Unit]
+Description=Puma service
+After=network.target syslog.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/puma.pid
+ExecStart=/usr/local/bin/puma
+WorkingDirectory=/opt/app/reddit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
