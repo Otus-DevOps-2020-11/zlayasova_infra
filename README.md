@@ -50,3 +50,13 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=./startup
+
+HomeWork №7
+
+Основное задание:
+
+Создан образ reddit-base с помощью инструмента packer. С созданным образом была создана ВМ и запущенно в ручную приложение.
+
+Дополнительно задание:
+
+Создан образ reddit-full с помощью инструмента packer. В него "запечен" скрипт для деплоя и запуска приложения, а так же добавлен скрипт для создания ВМ с этим образом.
