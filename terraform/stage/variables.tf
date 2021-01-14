@@ -35,3 +35,21 @@ variable instance_count {
   description = "Quantity instance"
   default     = "1"
 }
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-base"
+}
+
+variable db_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-db-base"
+}
+
+variable disk_size {
+  description = "Disk size"
+}
+
+variable disk_type {
+  description = "Disk type"
+}
