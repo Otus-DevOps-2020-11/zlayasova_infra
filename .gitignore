@@ -5,3 +5,5 @@
 *.tfvars
 .terraform/
 .idea/
+*.retry
+terraform/stage/backend.tf
