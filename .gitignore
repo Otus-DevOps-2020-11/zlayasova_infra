@@ -7,3 +7,5 @@
 .idea/
 *.retry
 terraform/stage/backend.tf
+jdauphant.nginx
+ansible/vault.key
