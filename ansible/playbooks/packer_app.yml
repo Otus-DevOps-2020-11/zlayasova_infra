@@ -2,14 +2,5 @@
 - name: Provision app node
   hosts: all
   become: true
-  tasks:
-
-    - name: Install package
-      apt:
-        name:
-          - ruby-full
-          - ruby-bundler
-          - build-essential
-          - git
-        update_cache: yes
-        state: present
+  roles:
+    - app

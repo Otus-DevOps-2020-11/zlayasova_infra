@@ -1,0 +1,43 @@
+---
+# tasks file for db
+- name: Show info about the env this host belongs to
+  debug:
+    msg: "This host is in {{ env }} environment!!!"
+
+- name: Install services package
+  tags: install
+  apt:
+    pkg:
+      - apt-transport-https
+      - ca-certificates
+    update_cache: yes
+    state: present
+
+- name: Add signing key
+  tags: install
+  apt_key:
+    url: https://www.mongodb.org/static/pgp/server-4.2.asc
+    state: present
+
+- name: Add repository MongoDB
+  tags: install
+  apt_repository:
+    repo: deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
+    state: present
+    update_cache: yes
+    filename: mongodb-org-4.2
+
+- name : Install MongoDB
+  tags: install
+  apt:
+    name: mongodb-org
+    install_recommends: yes
+    state: present
+    update_cache: yes
+
+- name: Enable and start service MongoDB
+  tags: install
+  systemd:
+    name: mongod
+    state: started
+    enabled: yes
