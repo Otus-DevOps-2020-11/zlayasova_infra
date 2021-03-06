@@ -42,8 +42,8 @@ deploy_dev_job:
 staging:
   stage: deploy_stage
   when: manual
-  only:
-    - /^\d+\.\d+\.\d+/
+#  only:
+#    - /^\d+\.\d+\.\d+/
   script:
     - echo 'Deploy'
   environment:
