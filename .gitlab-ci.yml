@@ -55,7 +55,6 @@ production:
   when: manual
   only:
     - tags
-#  start_in: 10 s
   script:
     - echo 'Deploy'
   environment:
