@@ -41,7 +41,9 @@ deploy_dev_job:
 
 branch review:
   stage: review
-  script: echo "Deployyyyys to $CI_ENVIRONMENT_SLUG"
+  script:
+    - echo "Deployyyyys to $CI_ENVIRONMENT_SLUG"
+    - echo "Deploy to $CI_COMMIT_REF_NAME"
   environment:
     name: branch/$CI_COMMIT_REF_NAME
     url: http://$CI_ENVIRONMENT_SLUG.example.com
