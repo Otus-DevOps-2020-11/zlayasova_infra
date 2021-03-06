@@ -4,7 +4,7 @@ stages:
   - build
   - test
   - review
-  - stage
+  - deploy_stage
   - production
 
 build_job:
@@ -40,7 +40,7 @@ deploy_dev_job:
     url: http://dev.example.com
 
 staging:
-  stage: stage
+  stage: deploy_stage
   when: manual
   only:
     - /^\d+\.\d+\.\d+/
