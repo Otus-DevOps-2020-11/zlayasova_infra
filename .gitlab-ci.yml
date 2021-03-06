@@ -53,7 +53,7 @@ staging:
 production:
   stage: production
   when: manual
-  start_in: 10 s
+#  start_in: 10 s
   script:
     - echo 'Deploy'
   environment:
